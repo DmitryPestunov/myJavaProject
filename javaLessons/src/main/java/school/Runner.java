@@ -1,36 +1,27 @@
 package school;
 
-import school.lesson2.*;
+import school.lesson3.Employee;
 
 public class Runner {
     public static void main(String[] args) {
 
-       InclusiveNumber checkInclusive = new InclusiveNumber();
+        Employee[] emplArray = new Employee[5];
 
-        checkInclusive.checkInclusive(5,15);
+        emplArray[0] = new Employee("Ivan Ivanov", "junior", "ivanovi@gmail.com",
+                                    56545852, 1000, 21);
+        emplArray[1] = new Employee("Petr Petrov", "junior", "petrovp@gmail.com",
+                                    65681594, 1200, 22);
+        emplArray[2] = new Employee("Denis Lutsenko", "middle", "lutsenkod@gmail.com",
+                                    54815656, 2000, 40);
+        emplArray[3] = new Employee("Vitali Borisenko", "senior", "borisenkov@gmail.com",
+                                    56545852, 3000, 41);
+        emplArray[4] = new Employee("Andrey Trugaaa", "Master Yoda", "masterY@gmail.com",
+                                    11111111, 10000, 25);
 
-        PositiveCheck checkPositive = new PositiveCheck(5);
-
-        checkPositive.check();
-
-        NegativeCheck.negativeCheck(0);
-
-        PrintString.print("Hello", 2);
-
-        LeapYearCheack.cheakLeap(2020);
-
-        ChangeElementsArray.changeElements();
-
-        InitializationArray.initArray();
-
-        MultiplicationLessSix.mul();
-
-        ChangeDiagonal.change();
-
-        InitialValueArray.initArr(3,88);
-
-        int [] i = {1 , 2, 3, 4};
-
-        ArrayShift.shift(i, -2);
+        for(int i = 0; i<emplArray.length; i++){
+            if(emplArray[i].getAge()>40){
+                System.out.println(emplArray[i]);
+            }
+        }
     }
 }
