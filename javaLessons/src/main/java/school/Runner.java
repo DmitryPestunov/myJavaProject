@@ -1,27 +1,18 @@
 package school;
 
-import school.lesson3.Employee;
+import school.lesson4.*;
+
 
 public class Runner {
     public static void main(String[] args) {
 
-        Employee[] emplArray = new Employee[5];
+        Plate plate = new Plate(20);
 
-        emplArray[0] = new Employee("Ivan Ivanov", "junior", "ivanovi@gmail.com",
-                                    56545852, 1000, 21);
-        emplArray[1] = new Employee("Petr Petrov", "junior", "petrovp@gmail.com",
-                                    65681594, 1200, 22);
-        emplArray[2] = new Employee("Denis Lutsenko", "middle", "lutsenkod@gmail.com",
-                                    54815656, 2000, 40);
-        emplArray[3] = new Employee("Vitali Borisenko", "senior", "borisenkov@gmail.com",
-                                    56545852, 3000, 41);
-        emplArray[4] = new Employee("Andrey Trugaaa", "Master Yoda", "masterY@gmail.com",
-                                    11111111, 10000, 25);
+        Cat [] catFlock = {new Cat(5), new Cat(10), new Cat(15)};
 
-        for(int i = 0; i<emplArray.length; i++){
-            if(emplArray[i].getAge()>40){
-                System.out.println(emplArray[i]);
-            }
+        for (Cat cat : catFlock){
+            cat.eat(plate);
+            System.out.println(cat.isSatiety());
         }
     }
 }
