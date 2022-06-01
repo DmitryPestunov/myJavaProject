@@ -13,4 +13,8 @@ public class Box <T extends Fruit>{
         return WeightFruits.getWeight(this) == WeightFruits.getWeight(box1);
     }
 
+    public void add(T frt){
+        box.add(frt);
+    }
+
 }

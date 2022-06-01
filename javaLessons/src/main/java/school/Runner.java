@@ -18,11 +18,11 @@ public class Runner {
         Box<Apple> applesBox2 = new Box<>();
 
         applesBox.getBox().add(new Apple());        //we can use for() here, but it's don't need now
-        applesBox.getBox().add(new Apple());
-        orangesBox.getBox().add(new Orange());
-        orangesBox.getBox().add(new Orange());
-        applesBox2.getBox().add(new Apple());
-        applesBox2.getBox().add(new Apple());
+        applesBox.getBox().add(new Apple());        //access to ArrayList by getter
+        orangesBox.add(new Orange());
+        orangesBox.add(new Orange());
+        applesBox2.add(new Apple());
+        applesBox2.add(new Apple());
 
         System.out.println(WeightFruits.getWeight(applesBox));
         System.out.println(applesBox.compare(orangesBox));
