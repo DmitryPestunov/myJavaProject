@@ -26,5 +26,8 @@ public class Runner {
 
         System.out.println(WeightFruits.getWeight(applesBox));
         System.out.println(applesBox.compare(orangesBox));
+
+        applesBox.shift(applesBox);
+        System.out.println(WeightFruits.getWeight(applesBox));
     }
 }
