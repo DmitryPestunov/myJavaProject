@@ -28,9 +28,7 @@ public class Plate {
     }
 
     public void decreaseFood(int amount) {
-        if(amount<food){
             food -= amount;
-        }
     }
 
     public void addFood(int addFood){

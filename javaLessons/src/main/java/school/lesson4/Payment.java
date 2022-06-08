@@ -6,7 +6,8 @@ public class Payment {
 
     ArrayList<Buy> purchases = new ArrayList();
 
-    public void buy(Buy buy){
+    public void buy(String name, int cost){
+        Buy buy = new Buy(name,cost);
         purchases.add(buy);
     }
 

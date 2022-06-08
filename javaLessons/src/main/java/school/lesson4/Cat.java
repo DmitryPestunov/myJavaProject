@@ -7,6 +7,7 @@ public class Cat extends Animal{
     private int appetite;
     private boolean satiety = false;
 
+
     public Cat() {
         createCount++;
     }
@@ -28,6 +29,10 @@ public class Cat extends Animal{
 
     public void setAppetite(int appetite) {
         this.appetite = appetite;
+    }
+
+    public static int getCreateCount() {
+        return createCount;
     }
 
     public boolean isSatiety() {

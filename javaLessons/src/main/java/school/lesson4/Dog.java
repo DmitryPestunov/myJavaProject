@@ -14,6 +14,10 @@ public class Dog extends Animal {
         createCount++;
     }
 
+    public static int getCreateCount() {
+        return createCount;
+    }
+
     @Override
     public void run(int length) {
         if(length<=MAX_RUN){

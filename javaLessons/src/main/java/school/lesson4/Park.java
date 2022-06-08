@@ -6,8 +6,9 @@ public class Park {
 
     ArrayList <Attraction> attractionList = new ArrayList();
 
-    public void attraction(Attraction attraction){
-        attractionList.add(attraction);
+    public void attraction(String name, String workTime, int cost){
+        Attraction atr = new Attraction(name, workTime, cost);
+        attractionList.add(atr);
     }
 
     public void showAttractionList () {

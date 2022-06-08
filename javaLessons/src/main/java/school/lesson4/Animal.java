@@ -42,7 +42,7 @@ public class Animal {
         this.age = age;
     }
 
-    public int getCreateCount() {
+    public static int getCreateCount() {
         return createCount;
     }
 
