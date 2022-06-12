@@ -1,28 +1,42 @@
 package school;
 
-import school.lesson7.AppData;
-import java.io.*;
-import java.util.Arrays;
+import school.lesson8.*;
+
+import java.util.ArrayList;
 
 public class Runner {
 
     public static void main(String[] args){
 
-        File file = new File("data.csv");
+        ArrayList <String> list = new ArrayList<>();
 
-        AppData app = new AppData();
+        list.add("Hello");
+        list.add("hello");
+        list.add("Hi");
+        list.add("Bye");
+        list.add("bye");
+        list.add("What");
+        list.add("you");
+        list.add("do");
+        list.add("Do");
+        list.add("You");
+        list.add("what");
+        list.add("List");
+        list.add("phone");
+        list.add("car");
+        list.add("airplane");
+        list.add("world");
 
-        app.read(file);
-        System.out.println(Arrays.deepToString(app.getHeader()));
-        System.out.println(Arrays.deepToString(app.getData()));
+        FindAndShowUniqueWord fasuw = new FindAndShowUniqueWord();
+        fasuw.findAndShow(list);
 
-        String[] heater = {"Value10","Value20","Value30","Value40","Value50"};
-        int [][] data = {{1,1,1},{2,2,2},{3,2,3}};
-        app.setHeader(heater);
-        app.setData(data);
-        app.write(file);
-        System.out.println(Arrays.deepToString(app.getHeader()));
-        System.out.println(Arrays.deepToString(app.getData()));
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add(5152553, "Pestunov");
+        phoneBook.add(5555555, "Borysenko");
+        phoneBook.add(2223344, "Pestunov");
+
+        phoneBook.get("Pestunov");
+        phoneBook.get("Ivanov");
 
     }
 
