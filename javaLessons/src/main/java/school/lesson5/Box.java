@@ -10,6 +10,14 @@ public class Box <T extends Fruit>{
         return box;
     }
 
+    public void setBox(ArrayList<T> box) {
+        this.box = box;
+    }
+
+    public void clear() {
+        box.clear();
+    }
+
     public boolean compare(Box box1){
         return WeightFruits.getWeight(this) == WeightFruits.getWeight(box1);
     }
@@ -17,6 +25,7 @@ public class Box <T extends Fruit>{
     public void shift (Box <T> shiftBox){
         ArrayList shift = shiftBox.getBox();
         this.box.addAll(shift);
+        shiftBox.clear();
     }
 
     public void add(T frt){

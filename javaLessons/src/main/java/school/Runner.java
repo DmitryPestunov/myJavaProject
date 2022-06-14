@@ -27,7 +27,8 @@ public class Runner {
         System.out.println(WeightFruits.getWeight(applesBox));
         System.out.println(applesBox.compare(orangesBox));
 
-        applesBox.shift(applesBox);
+        applesBox.shift(applesBox2);
         System.out.println(WeightFruits.getWeight(applesBox));
+        System.out.println(WeightFruits.getWeight(applesBox2));   //check box
     }
 }
