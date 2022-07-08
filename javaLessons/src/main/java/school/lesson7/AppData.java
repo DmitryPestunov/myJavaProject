@@ -4,7 +4,7 @@ import java.io.*;
 
 public class AppData {
     private String[] header;
-    private int[][] data = new int[10][10];
+    private int[][] data = new int[2][];
 
     public AppData() {
     }
@@ -37,6 +37,7 @@ public class AppData {
             int a = 0;
             while ((line = reader.readLine()) != null){
                 String[] values = line.split(";");
+                data[a] = new int[values.length];
                 for (int i = 0; i < values.length; i++) {
                     data[a][i] = Integer.parseInt(values[i]);
                 }
